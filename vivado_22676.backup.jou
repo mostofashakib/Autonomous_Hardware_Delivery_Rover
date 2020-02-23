@@ -1,0 +1,53 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu Feb 20 17:10:25 2020
+# Process ID: 22676
+# Current directory: C:/Users/19514/Desktop/Project_Lab_1/rover_motor
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12848 C:\Users\19514\Desktop\Project_Lab_1\rover_motor\rover_motor.xpr
+# Log file: C:/Users/19514/Desktop/Project_Lab_1/rover_motor/vivado.log
+# Journal file: C:/Users/19514/Desktop/Project_Lab_1/rover_motor\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/19514/Desktop/Project_Lab_1/rover_motor/rover_motor.xpr
+update_compile_order -fileset sources_1launch_simulation
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+close [ open C:/Users/19514/Desktop/Project_Lab_1/rover_motor/rover_motor.srcs/constrs_1/new/movement_XDC.xdc w ]
+add_files -fileset constrs_1 C:/Users/19514/Desktop/Project_Lab_1/rover_motor/rover_motor.srcs/constrs_1/new/movement_XDC.xdc
+export_ip_user_files -of_objects  [get_files C:/Users/19514/Desktop/Project_Lab_1/rover_motor/rover_motor.srcs/constrs_1/imports/digilent-xdc-master/Basys-3-Master.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 C:/Users/19514/Desktop/Project_Lab_1/rover_motor/rover_motor.srcs/constrs_1/imports/digilent-xdc-master/Basys-3-Master.xdc
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/19514/Desktop/Project_Lab_1/Individual components/7-Segment display with simulations/Binary_To_7Segment.runs/impl_1/Binary_To_7Segment.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw_manager
+open_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+close_design
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:\Users\19514\Desktop\Project_Lab_1\Individual components\7-Segment display with simulations\Binary_To_7Segment.runs\impl_1\Binary_To_7Segment.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/19514/Desktop/Project_Lab_1/Individual components/7-Segment display with simulations/Binary_To_7Segment.runs/impl_1/Binary_To_7Segment.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw_manager
